@@ -1,0 +1,13 @@
+kind: pipeline
+name: default
+
+clone:
+  disable: true
+
+steps:
+- name: clone
+  image: docker:git
+  environment:
+    DRONE_COMMIT: release-1.0
+  commands:
+  - git clone https://github.com/nsuriya239/ecommerce.git
