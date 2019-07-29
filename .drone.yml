@@ -5,9 +5,14 @@ clone:
   disable: true
 
 steps:
-- name: clone
-  image: docker:git
-  environment:
-    DRONE_COMMIT: release-1.0
-  commands:
-  - git clone https://github.com/nsuriya239/GetInventoryService.git
+# - name: clone
+#   image: docker:git
+#   environment:
+#     DRONE_COMMIT: release-1.0
+#   commands:
+#   - git clone https://github.com/nsuriya239/GetInventoryService.git
+
+
+ - name: build
+    image: node:latest
+    commands: npm install
