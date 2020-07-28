@@ -2,25 +2,10 @@ kind: pipeline
 name: default
 
 clone:
-  disable: true
+  disable: false
 
 steps:
-- name: clone
-  image: docker:git
-  environment:
-    DRONE_COMMIT: release-1.0
-  commands:
-  - git clone https://github.com/suriyanu/dronePlay.git
-  - echo $PWD
-  - cd dronePlay
-
-- name: node
-  image: node: latest
-  environment:
-    AWS_ACCESS_KEY_ID:
-            from_secret: AWS_ACCESS_KEY_ID
-    AWS_SECRET_ACCESS_KEY:
-            from_secret: AWS_SECRET_ACCESS_KEY
+- name: build
+  image: node
   commands:
           - npm install
-          - echo $AWS_ACCESS_KEY_ID
