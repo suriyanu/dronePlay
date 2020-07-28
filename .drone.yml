@@ -14,7 +14,6 @@ steps:
                   from_secret: AWS_SECRET_ACCESS_KEY
   commands:
           - npm install -g
-          - tree
           - node ./node_modules/serverless/bin/serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
           - node ./node_modules/serverless/bin/serverless -c serverless/serverless.yml invoke local --function hello 
 
