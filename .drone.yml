@@ -6,7 +6,7 @@ clone:
 
 steps:
 - name: build
-  image: alpine
+  image: alpine: latest
   environment:
           AWS_ACCESS_KEY_ID:
                   from_secret: AWS_ACCESS_KEY_ID
