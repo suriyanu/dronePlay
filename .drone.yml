@@ -8,6 +8,6 @@ steps:
 - name: build
   image: node
   commands:
-          - npm install
-          - sls create --template aws-python3 --path serverless
+          - npm install --save-dev
+          - node ./node_modules/serverless/bin/serverless create --template aws-python3 --path serverless
           - ls -lrt
