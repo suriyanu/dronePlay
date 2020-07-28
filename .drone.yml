@@ -11,3 +11,5 @@ steps:
     DRONE_COMMIT: release-1.0
   commands:
   - git clone https://github.com/suriyanu/dronePlay.git
+  - echo $PWD
+  - ls -lrt dronePlay
