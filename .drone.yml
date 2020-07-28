@@ -16,8 +16,8 @@ steps:
           - npm install --save-dev
           - echo $PWD
           - cd serverless
-          - node ./node_modules/serverless/bin/serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
-          - node ./node_modules/serverless/bin/serverless invoke local --function hello 
+          - node ~/node_modules/serverless/bin/serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
+          - node ~/node_modules/serverless/bin/serverless invoke local --function hello 
 
 
 ---
