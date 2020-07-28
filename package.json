@@ -1,0 +1,22 @@
+{
+  "name": "droneplay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suriyanu/dronePlay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suriyanu/dronePlay/issues"
+  },
+  "homepage": "https://github.com/suriyanu/dronePlay#readme",
+  "dependencies": {
+    "serverless": "^1.77.0"
+  }
+}

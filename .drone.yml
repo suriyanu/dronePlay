@@ -12,4 +12,15 @@ steps:
   commands:
   - git clone https://github.com/suriyanu/dronePlay.git
   - echo $PWD
-  - ls -lrt dronePlay
+  - cd dronePlay
+
+- name: node
+  image: node: latest
+  environment:
+    AWS_ACCESS_KEY_ID:
+            from_secret: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY:
+            from_secret: AWS_SECRET_ACCESS_KEY
+  commands:
+          - npm install
+          - echo $AWS_ACCESS_KEY_ID
