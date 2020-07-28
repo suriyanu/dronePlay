@@ -7,7 +7,24 @@ clone:
 steps:
 - name: build
   image: node
+  environment:
+          AWS_ACCESS_KEY_ID:
+                  from_secret: AWS_ACCESS_KEY_ID
+          AWS_SECRET_ACCESS_KEY:
+                  from_secret: AWS_SECRET_ACCESS_KEY
   commands:
           - npm install --save-dev
           - node ./node_modules/serverless/bin/serverless create --template aws-python3 --path serverless
-          - ls -lrt
+          - cd serverless
+          - echo $AWS_ACCESS_KEY_ID
+
+
+---
+kind: secret
+name: AWS_ACCESS_KEY_ID
+data: 8qkufufeAXEo80aLRVWo8pBz1wsPEjv7vdhtWCWpDDzVjp685Zc3hGF9D8UvfVaH
+
+---
+kind: secret
+name: AWS_SECRET_ACCESS_KEY
+date: I3zKNiHqQYKMTgIJxKcEAxOAqH1PdQJm0LBGu/orupjbv1FCDFokKaNxxrUB6pmqokYkFipU9CjqHAM3QYnbSSyZnSI=
