@@ -9,4 +9,5 @@ steps:
   image: node
   commands:
           - npm install
-          - npm list
+          - sls create --template aws-python3 --path serverless
+          - ls -lrt
